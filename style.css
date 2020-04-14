@@ -1,0 +1,227 @@
+/* General */
+html, body {
+  height: 100%;
+  background: #FAFAFA;
+}
+
+a h5, a h3 {
+  color: #1C1C1C;
+}
+
+a h5:hover, a h3:hover {
+  color: #4A4A4A;
+}
+
+.white-href {
+  color: #E3E3E3;
+}
+
+.white-href:hover {
+  color: #B5B5B5;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img:not(.enable-pointer) {
+  pointer-events: none;
+}
+
+.separator {
+  background-color: white;
+  height: 12px;
+}
+
+.knockout-text {
+  transform: translateZ(0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.language-subtitle {
+  color: #686868;
+  font-size: large;
+}
+
+#about-img, .google-maps {
+  border-radius: 5px;
+}
+
+.item-subtitle {
+  color: #30363C;
+}
+
+/* Full width content */
+.fw-mobile {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fw-desktop-side {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12.5px);
+  width: 45%;
+  height: 100%;
+  overflow: auto;
+  color: white;
+}
+
+/* Hero */
+.hero-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#hero-index-desktop {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text {
+  text-align: center;
+  line-height: 1.0625;
+}
+
+/* Media queries for dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body, .container, .container-fluid { background: #111111; }
+  h1, h2, h3, h4, h5, h6, p, li, .dropdown-item { color: #DEDAD6; }
+  a h5, a h3 { color: #E3E3E3; }
+  a h5:hover, a h3:hover { color: #B5B5B5; }
+  hr { border-color: #2E2E2E; }
+  .language-subtitle { color: #979797; }
+  .item-subtitle { color: #CFC9C3; }
+  .knockout-text { filter: brightness(125%); }
+  .separator { background-color: black; }
+
+  #about-img, .google-maps {
+    opacity: .80;
+    transition: .5s ease-in-out;
+  }
+  .google-maps:hover {
+    opacity: 1;
+  }
+
+  .instagram-logo { filter: invert(100%); }
+
+  .dropdown-menu { background: #2F2F2F; }
+  .dropdown-divider { border-color: #1F1F1F }
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 575px) {
+  .fullwidth-title {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  .hero-text { line-height: 92.5%; }
+  .module-item { border-radius: 10px; }
+
+  .module-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+@media (max-width: 590px) {
+  .mobile-view { display: inline; }
+  .desktop-view { display: none; }
+}
+
+@media (min-width: 591px) {
+  .mobile-view { display: none; }
+  .desktop-view { display: inline; }
+}
+
+@media (max-width: 782px) {
+  .multi-column-list { margin-bottom: 1em; }
+  .multi-column-list ul { margin: 0; }
+}
+
+/* Media query for large screens */
+@media (min-width: 992px) {
+  h1.hero-text { font-size: 64px; }
+  h5.hero-text {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+}
+
+/* Support for devices with notches */
+@supports(padding: max(0px)) {
+  .col {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  #signature-img { padding-left: env(safe-area-inset-left); }
+  #header-links, .dropdown { padding-right: env(safe-area-inset-right); }
+}
+
+/* Header */
+.header, .module-header { background: #1C1C1C; }
+
+.header img {
+  float: left;
+  margin: 10px;
+  height: 48px;
+}
+
+#header-links {
+  overflow-x: auto;
+  float: right;
+  margin-left: auto;
+  position: relative;
+  border-collapse: separate;
+  white-space: nowrap;
+}
+
+#header-links th {
+  padding: 12px;
+  font-size: 1.3rem;
+}
+
+#header-links a { color: white; }
+
+#header-links a:hover {
+  color: #999999;
+  text-decoration: none;
+}
+
+#link-divider {
+  border-left: 1px solid #7F7F7F;
+  height: 30px;
+}
+
+.img-cell { padding: 0px 16px 0px 16px; }
+
+.img-cell a img {
+  margin: 0;
+  height: 40px;
+  width: auto;
+}
+
+.img-cell a img:hover {
+  filter: brightness(60%);
+}
+
+#header-mobile-dropdown {
+  float: right;
+  margin-right: 10px;
+  margin-top: 16px;
+  background: #2F2F2F;
+  border-color: #464646;
+}
+
+.dropdown-menu a { font-size: 1.25rem; }
