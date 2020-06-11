@@ -53,23 +53,20 @@ img:not(.enable-pointer) {
   color: #30363C;
 }
 
-/* Full width content */
-.fw-mobile {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
+.project-img {
+  transform: scale(1.1);
+  filter: brightness(45%) blur(12.5px);
+  min-width: 100%;
+  min-height: 650px;
+  max-height: 80vh;
 }
 
-.fw-desktop-side {
+.project-text {
   position: absolute;
-  top: 0%;
-  left: 0%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(12.5px);
-  width: 45%;
-  height: 100%;
-  overflow: auto;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
   color: white;
 }
 
@@ -91,6 +88,7 @@ img:not(.enable-pointer) {
 .hero-text {
   text-align: center;
   line-height: 1.0625;
+  text-shadow: 1px 1px 2px #333333;
 }
 
 /* Media queries for dark mode */
