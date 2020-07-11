@@ -12,14 +12,18 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" role="img" color="#5bbad5">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#2b5797">
   <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="checkCookie()">
+<body>
   <div id="loadHeader"></div>
   <div class="container-fluid shadow">
     <div class="row" id="home-hero-row">
@@ -27,7 +31,7 @@
         <span class="mobile-view">
           <div id="hero-index-mobile" style="margin-top: 10%;">
             <h1 class="hero-text" style="display: none; white-space: nowrap; color: white;">Michael Lam</h1>
-            <h5 class="hero-text" style="display: none; color: #AAAAAA;">Grade 12 Student</h5>
+            <h5 class="hero-text" style="display: none; color: #AAAAAA;">Computer Science Student at<br>Carleton University</h5>
           </div>
           <img src="images/hero/index.jpg" class="d-block w-100" id="home-hero-img-mobile" style="opacity: 0;" alt="Michael Lam">
         </span>
@@ -35,7 +39,7 @@
           <img src="images/hero/index.jpg" class="d-block" id="home-hero-img-desktop" style="opacity: 0;" width="60%" alt="Michael Lam">
           <div id="hero-index-desktop">
             <h1 class="hero-text" style="display: none; white-space: nowrap; color: white;">Michael Lam</h1>
-            <h5 class="hero-text" style="display: none; color: #AAAAAA;">Grade 12 Student</h5>
+            <h5 class="hero-text" style="display: none; color: #AAAAAA;">Computer Science Student at Carleton University</h5>
           </div>
         </span>
       </div>
@@ -48,11 +52,12 @@
         <div class="row">
           <div class="col pb-3 px-3">
             <h1 class="knockout-text" style="background-image: url(images/knockout-text/about.png);">About</h1>
-            <p>I am a trilingual Grade 12 student at A.Y. Jackson Secondary School. With developed experience in retail, I currently work as a Supervisor for the Sens Store Silent Auctions team, where I assist with managerial tasks and supervising Silent Auctioneers during Senators home games. I also take on different positions as needed, such as a Silent Auctioneer during games with a reduced number of employees on shift, or as a Sales Associate for the Sens Store. Working at the Canadian Tire Centre, I am able to apply my culminated skills and experiences to better serve customers and work with others in a fast-paced environment.</p>
+            <p>I am a trilingual first-year student at Carleton University studying Computer Science with a focus on Software Engineering and a minor in Biology.</p>
+            <p>From the moment I used a computer for the first time as a child, I have always been enthralled with the developing capabilities of technology, from providing immediate face-to-face communication with someone living across the world, to passively detecting heart abnormalities on our wrists with prevalent devices such as the Apple Watch. Personally experiencing these life-changing impacts, I strive to have a career developing technology that is accessible and that has profound impacts on our daily lives, whether it be simply working on the smartphones we rely on daily, or incorporating and simplifying healthcare technology into our devices.</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md my-auto pb-4 px-3">
+          <div class="col-md my-auto pb-3 px-3">
             <h2 class="knockout-text" style="background-image: url(images/knockout-text/skills.png);">
               Customer Service<br>
               Interpersonal Skills<br>
@@ -62,8 +67,15 @@
               Teamwork
             </h2>
           </div>
-          <div class="col-md my-auto pb-4 px-3">
-            <h2 class="knockout-text" style="background-image: url(images/knockout-text/skills.png);">
+          <div class="col-md my-auto pb-3 px-3">
+            <h2 class="knockout-text d-none d-lg-block" style="background-image: url(images/knockout-text/skills.png);">
+              English<br>
+              Français <small class="language-subtitle">French</small><br>
+              普通话 <small class="language-subtitle">Chinese, Mandarin (Simplified)</small><br>
+              普通話 <small class="language-subtitle">Chinese, Mandarin (Traditional)</small><br>
+              廣東話 <small class="language-subtitle">Chinese, Cantonese</small>
+            </h2>
+            <h2 class="knockout-text d-md-block d-lg-none" style="background-image: url(images/knockout-text/skills.png);">
               English<br>
               Français <small class="language-subtitle">French</small><br>
               普通话 <small class="language-subtitle">Simplified Mandarin</small><br>
@@ -85,16 +97,30 @@
     </div>
     <div class="row">
       <div class="col-sm-auto pb-2">
+        <img src="images/carleton-logo.svg" role="img" class="d-block" width="75px" alt="Carleton University">
+      </div>
+      <div class="col pb-2 px-3">
+        <h3 style="margin-bottom: 0.5%;">Carleton University</h3>
+        <h4 style="margin-bottom: 0.5%;" class="item-subtitle">Bachelor of Computer Science (B.C.S.) Honours</h4>
+        <h5 style="margin-bottom: 0.5%;" class="item-subtitle">September 2020 – April 2025</h5>
+        <h6 class="item-subtitle">Ottawa, ON</h6>
+        <p>Accepted with an admissions average of over 95%, I am currently studying Computer Science with a stream in Software Engineering as a first-year student. I am also participating in the co-op program to apply and develop practical experience in the field, as well as taking a minor in Biology.</p>
+      </div>
+      <div class="col-md-8 col-lg-4 d-flex m-auto pb-4 px-3">
+        <div class="embed-responsive embed-responsive-1by1">
+          <iframe class="embed-responsive-item google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11209.45650204421!2d-75.70465980313205!3d45.38182511559974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0675ca30e687%3A0xc7abf08766be8f82!2sCarleton%20University%2C%20Ottawa%2C%20ON!5e0!3m2!1sen!2sca!4v1594269498402!5m2!1sen!2sca" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-auto pb-2">
         <img src="images/ayj-logo.svg" role="img" class="d-block" width="75px" alt="A.Y. Jackson Secondary School">
       </div>
       <div class="col pb-4 px-3">
         <h3 style="margin-bottom: 0.5%;">A.Y. Jackson Secondary School</h3>
         <h5 style="margin-bottom: 0.5%;" class="item-subtitle">September 2016 – June 2020</h5>
         <h6 class="item-subtitle">Ottawa, ON</h6>
-        <p>
-          Currently a grade 12 student, I’m continuing my studies in French Immersion while also participating in numerous extracurricular activities and clubs. By the end of the school year, I aim to graduate with two Advanced Placement (AP)
-          university credits and complete the OCDSB International Certificate Program with Honours.
-        </p>
+        <p>I have completed my studies in French Immersion throughout the four years while also participating in numerous extracurricular activities and clubs. I have graduated with an Advanced Placement (AP) university credit in French and have completed the OCDSB International Certificate Program with Honours.</p>
         <h5>Awards and Certifications</h5>
         <div class="row multi-column-list">
           <div class="col-md-6">
@@ -122,21 +148,20 @@
           <div class="col-md-6">
             <ul>
               <li>Coding Club</li>
+              <li>Concert Band</li>
               <li>Diversity Club</li>
               <li>Environmental Council</li>
               <li>Health Science Club (HOSA)</li>
-              <li>International Certificate Program (with Honours)</li>
               <li>Jazz Band</li>
             </ul>
           </div>
           <div class="col-md-6">
             <ul>
-              <li>Junior Concert Band</li>
               <li>ManUp</li>
               <li>Me to We Club</li>
               <li>MEDLIFE</li>
+              <li>OCDSB International Certificate Program (with Honours)</li>
               <li>Outers Club</li>
-              <li>Senior Concert Band</li>
             </ul>
           </div>
         </div>
@@ -147,9 +172,7 @@
       </div>
       <div class="col-md-8 col-lg-4 d-flex m-auto pb-4 px-3">
         <div class="embed-responsive embed-responsive-1by1">
-          <iframe class="embed-responsive-item google-maps"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22447.636797281004!2d-75.87216297025165!3d45.30934270992863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdffa6e4326f5f%3A0x61f3b50888b32cc3!2sA.Y.%20Jackson%20Secondary%20School!5e0!3m2!1sen!2sca!4v1576994050658!5m2!1sen!2sca"
-            width="400" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          <iframe class="embed-responsive-item google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22447.636797281004!2d-75.87216297025165!3d45.30934270992863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccdffa6e4326f5f%3A0x61f3b50888b32cc3!2sA.Y.%20Jackson%20Secondary%20School!5e0!3m2!1sen!2sca!4v1576994050658!5m2!1sen!2sca" width="400" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
@@ -192,7 +215,7 @@
             <h4 style="margin-bottom: 0.5%;">Silent Auctioneer</h4>
             <h5 style="margin-bottom: 0.5%;" class="item-subtitle">September 2017 – November 2018 (1 year, 3 months)</h5>
             <h6 class="item-subtitle">Canadian Tire Centre, Ottawa</h6>
-            <p>As a Silent Auctioneer for the Sens Store team, I assist customers with the bidding of merchandise during Senators home games. My tasks include:</p>
+            <p>As a Silent Auctioneer for the Sens Store team, I assisted customers with the bidding of merchandise during Senators home games. My tasks include:</p>
             <ul>
               <li>Retrieving and putting away items in the warehouse</li>
               <li>Setting up and dismantling items for display</li>
@@ -233,8 +256,9 @@
             <ul>
               <li>Front-end web development using the React library</li>
               <li>Ensuring cross-browser compatibility across Windows, macOS and Linux (RHEL 7) systems</li>
-              <li>Developing collaboratively with software and tools such as Vagrant, Git and Jira</li>
-              <li>Creating end-user documentation</li>
+              <li>Developing collaboratively with software such as Vagrant, Git and GitLab, Gradle, and Jira</li>
+              <li>Testing software to ensure functional and non-functional requirements were met</li>
+              <li>Publishing end-user documentation</li>
             </ul>
           </div>
         </div>
@@ -262,7 +286,7 @@
             <h4 style="margin-bottom: 0.5%;">Supply Student Helper</h4>
             <h5 style="margin-bottom: 0.5%;" class="item-subtitle">July 2018 (1 month)</h5>
             <h6 class="item-subtitle">Devonshire Community Public School, Ottawa</h6>
-            <p>As a Supply Student Helper for the 2018 OCDSB International Languages Summer Program, I assisted staff members at Devonshire Community Public School with their tasks. My tasks included:</p>
+            <p>As a Supply Student Helper for the OCDSB International Languages Summer Program, I assisted staff members at Devonshire Community Public School with their tasks. My tasks included:</p>
             <ul>
               <li>Implementing instructional programs under teacher supervision</li>
               <li>Organizing and implementing school assemblies</li>
@@ -310,7 +334,7 @@
       return null;
     }
 
-    function checkCookie() {
+    window.onload = function() {
       var firstVisit = readCookie("firstVisit");
       if (firstVisit === "false" || window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches === true) {
         $("#home-hero-img-mobile, #home-hero-img-desktop").css("opacity", 1);
@@ -322,7 +346,7 @@
         $("#home-hero-img-desktop").fadeTo(1500, 1, function() {
           $("#hero-index-desktop .hero-text").animate({ height: 'toggle', opacity: 'toggle' }, 1000);
         });
-        createCookie("firstVisit", "false", 0)
+        createCookie("firstVisit", "false", 0);
       }
     }
   </script>
