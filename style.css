@@ -1,39 +1,27 @@
-/* General */
+/* ---------- GENERAL ---------- */
 html, body {
   height: 100%;
   background: #FAFAFA;
 }
 
 .container:first-of-type, .container-fluid:first-of-type:not(.header) {
-  margin-top: 68px;;
+  margin-top: 68px;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 a h3, a h5 {
   color: #1C1C1C;
 }
 
-a h3:hover, a h5:hover {
+a h3:hover, a h5 :not(.capsule-button):hover {
   color: #4A4A4A;
-}
-
-a.capsule-button h5, a.capsule-button h6 {
-  color: white;
 }
 
 a img:hover {
   opacity: 0.6;
-}
-
-.white-href {
-  color: #E3E3E3;
-}
-
-.white-href:hover {
-  color: #B5B5B5;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 img:not(.enable-pointer) {
@@ -52,6 +40,8 @@ img:not(.enable-pointer) {
   color: transparent;
 }
 
+/* ---------- SPECIFIC PAGES ---------- */
+/* Homepage */
 .language-subtitle {
   color: #686868;
   font-size: large;
@@ -61,12 +51,15 @@ img:not(.enable-pointer) {
   border-radius: 5px;
 }
 
+/* Project page */
 .project-img {
   transform: scale(1.2);
   filter: brightness(45%) blur(12.5px);
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   min-height: 650px;
-  max-height: 80vh;
+  max-height: 40vh;
+  object-fit: cover;
 }
 
 .project-text {
@@ -78,17 +71,23 @@ img:not(.enable-pointer) {
   color: white;
 }
 
+/* ---------- COMPONENTS ---------- */
+/* Capsule-shaped button */
 .capsule-button {
-  background-color: #0071E3;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #595959;
+  border-radius: 500px;
   padding-top: 8px;
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 8px;
-  border-radius: 500px;
 }
 
-.capsule-button:hover {
-  background-color: #3C7FDE;
+.capsule-button:hover { background-color: rgba(89, 89, 89, 0.7); }
+
+a.capsule-button h5, a.capsule-button h6 {
+  color: black;
+  display: inline;
 }
 
 /* Hero */
@@ -112,87 +111,11 @@ img:not(.enable-pointer) {
   text-shadow: 1px 1px 2px #333333;
 }
 
-/* Media queries for dark mode */
-@media (prefers-color-scheme: dark) {
-  html, body, .container, .container-fluid { background: #111111; }
-  h1, h2, h3, h4, h5, h6, p, li, .dropdown-item { color: #DEDAD6; }
-  a h3, a h5 { color: #E3E3E3; }
-  a h3:hover, a h5:hover { color: #B5B5B5; }
-  hr { border-color: #2E2E2E; }
-  .language-subtitle { color: #979797; }
-  .knockout-text { filter: brightness(125%); }
-  .separator { background-color: black; }
-
-  .google-maps {
-    opacity: 0.8;
-    transition: .5s ease-in-out;
-  }
-  .google-maps:hover {
-    opacity: 1;
-  }
-
-  .instagram-logo { filter: invert(100%); }
-
-  .dropdown-menu { background: #2F2F2F; }
-  .dropdown-divider { border-color: #1F1F1F }
-}
-
-/* Media queries for mobile devices */
-@media (max-width: 575px) {
-  .fullwidth-title {
-    margin-top: 10px;
-    font-size: 2rem;
-  }
-
-  .hero-text { line-height: 92.5%; }
-  .module-item { border-radius: 10px; }
-
-  .module-img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-}
-
-@media (max-width: 590px) {
-  .mobile-view { display: inline; }
-  .desktop-view { display: none; }
-}
-
-@media (min-width: 591px) {
-  .mobile-view { display: none; }
-  .desktop-view { display: inline; }
-}
-
-@media (max-width: 782px) {
-  .multi-column-list { margin-bottom: 1em; }
-  .multi-column-list ul { margin: 0; }
-}
-
-/* Media query for large screens */
-@media (min-width: 1200px) {
-  h1.hero-text { font-size: 64px; }
-  h5.hero-text {
-    font-size: 28px;
-    white-space: nowrap;
-  }
-}
-
-/* Support for devices with notches */
-@supports(padding: max(0px)) {
-  .col, #projects-section {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-
-  #signature-img { padding-left: env(safe-area-inset-left); }
-  #header-links, .dropdown { padding-right: env(safe-area-inset-right); }
-}
-
 /* Header */
 .header {
   position: fixed;
   top: 0;
-  background-color: rgba(28, 28, 28, 0.7);
+  background-color: rgba(28, 28, 28, 0.7) !important;
   -webkit-backdrop-filter: saturate(200%) blur(25px);
   backdrop-filter: saturate(200%) blur(20px);
 }
@@ -246,7 +169,80 @@ img:not(.enable-pointer) {
   margin-right: 10px;
   margin-top: 16px;
   background: #2F2F2F;
-  border-color: #464646;
+  border-color: #7F7F7F;
+}
+
+#header-mobile-dropdown:hover {
+  background: #464646;
 }
 
 .dropdown-menu a { font-size: 1.25rem; }
+
+/* ---------- CONDITIONALS ---------- */
+/* Font and minor design changes to adapt to mobile screens */
+@media (max-width: 575px) {
+  .fullwidth-title {
+    margin-top: 10px;
+    font-size: 2rem;
+  }
+
+  .hero-text { line-height: 92.5%; }
+  .module-item { border-radius: 10px; }
+
+  .module-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+/* Hides bottom margin on homepage lists on mobile screens */
+@media (max-width: 768px) {
+  .multi-column-list { margin-bottom: 1em; }
+  .multi-column-list ul { margin: 0; }
+}
+
+/* Font changes to adapt to large screens */
+@media (min-width: 1200px) {
+  h1.hero-text { font-size: 64px; }
+  h5.hero-text {
+    font-size: 28px;
+    white-space: nowrap;
+  }
+}
+
+/* Support for system-wide dark mode */
+@media (prefers-color-scheme: dark) {
+  html, body, .container, .container-fluid { background: #111111; }
+  h1, h2, h3, h4, h5, h6, p, li, .dropdown-item { color: #DEDAD6; }
+  a h3, a h5 { color: #E3E3E3; }
+  a h3:hover, a h5 :not(.capsule-button):hover { color: #B5B5B5; }
+  hr { border-color: #2E2E2E; }
+  .language-subtitle { color: #979797; }
+  .knockout-text { filter: brightness(125%); }
+  .separator { background-color: black; }
+
+  .google-maps {
+    opacity: 0.8;
+    transition: .5s ease-in-out;
+  }
+  .google-maps:hover { opacity: 1; }
+
+  .dropdown-menu { background: #2F2F2F; }
+  .dropdown-divider { border-color: #1F1F1F }
+
+  .capsule-button { background-color: rgba(35, 35, 35, 0.5) }
+  .capsule-button:hover { background-color: rgba(70, 70, 70, 0.7); }
+  a.capsule-button h5, a.capsule-button h6 { color: white; }
+  .capsule-button img { filter: invert(100%); }
+}
+
+/* Support for devices with a notch design */
+@supports(padding: max(0px)) {
+  .col, #projects-section {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  #signature-img { padding-left: env(safe-area-inset-left); }
+  #header-links, .dropdown { padding-right: env(safe-area-inset-right); }
+}

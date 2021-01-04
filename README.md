@@ -3,10 +3,10 @@ This repository contains a personal website that features a detailed résumé an
 
 ## Features
 ### Responsive Design
-![Responsive Design](images/responsive-design.png)
+![Responsive Design](images/readme/responsive-design.png)
 
 ### Support for System-wide Dark Mode
-![Support for System-wide Dark Mode](images/dark-mode-support.png)
+![Support for System-wide Dark Mode](images/readme/dark-mode-support.png)
 
 ### Support for Devices with a Notch Design
-![Support for Devices with a Notch Design](images/notch-support.png)
+![Support for Devices with a Notch Design](images/readme/notch-support.png)
