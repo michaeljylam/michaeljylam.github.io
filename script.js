@@ -10,6 +10,7 @@ load("header.html", document.getElementById("loadHeader"));
 
 // Calculate experience duration
 let supervisorStart = new Date("11/01/2018");
+let ccssStart = new Date("10/01/2020");
 
 function timeSince(date) {
   let timeDifference = new Date().getTime() - date.getTime();
@@ -39,3 +40,6 @@ function timeSince(date) {
 }
 
 document.getElementById("supervisor-duration").innerHTML += " (" + timeSince(supervisorStart) + ")";
+for (let element of document.getElementsByClassName("ccss-duration")) {
+  element.innerHTML += " (" + timeSince(ccssStart) + ")";
+}
