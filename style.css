@@ -41,12 +41,11 @@ img:not(.enable-pointer) {
 }
 
 /* Enables scrolling to specific page sections while offsetting navbar height */
-*[id]:before { 
-  display: block; 
-  visibility: hidden; 
-  margin-top: -68px; 
-  height: 68px; 
-  content: ""; 
+a.scroll-anchor {
+  display: block;
+  visibility: hidden;
+  position: relative;
+  top: -68px;
 }
 
 /* ---------- SPECIFIC PAGES ---------- */
@@ -92,7 +91,9 @@ img:not(.enable-pointer) {
   padding-bottom: 8px;
 }
 
-.capsule-button:hover { background-color: rgba(89, 89, 89, 0.7); }
+.capsule-button:hover { background-color: rgba(47, 47, 47, 0.7);}
+.capsule-button:hover img { filter: invert(100%); }
+.capsule-button:hover h5, .capsule-button:hover h6 { color: white; }
 
 a.capsule-button h5, a.capsule-button h6 {
   color: black;
@@ -128,7 +129,10 @@ a.capsule-button h5, a.capsule-button h6 {
   backdrop-filter: saturate(200%) blur(20px);
 }
 
-.navbar-brand { padding: 0; }
+.navbar-brand {
+  margin: 0;
+  padding: 0;
+}
 
 .navbar img {
   float: left;
@@ -146,7 +150,8 @@ a.capsule-button h5, a.capsule-button h6 {
 }
 
 .dropdown-menu { background-color: #2F2F2F }
-.dropdown-item { color: white; }
+.dropdown-toggle:focus { outline: none !important; }
+.dropdown-item { color: white;}
 .dropdown-item:hover { background-color: #E3E3E3; }
 .dropdown-item.active, .dropdown-item:active { background-color: #4A4A4A; }
 
@@ -178,33 +183,28 @@ a.capsule-button h5, a.capsule-button h6 {
 /* ---------- CONDITIONALS ---------- */
 /* Changes to fit navigation bar on extra small mobile screens (e.g. first-generation iPhone SE) */
 @media (max-width: 340px) {
-  .navbar img {
-    margin: 11px;
-    height: 46px;
-  }
-  
   .btn-icon { display: none; }
 }
 
 /* Font and minor design changes to adapt to extra small devices */
 @media (max-width: 575px) {
   .hero-text { line-height: 92.5%; }
-  .navbar .nav-item {
-    padding: 0px 10px 10px 10px;
-    text-align: center;
-  }
-  .nav-link { padding-bottom: 0; }
+  .navbar .nav-item, .dropdown-menu { text-align: center; }
+  .navbar .nav-item:last-of-type { padding-bottom: 16px; }
+}
 
-  .dropdown-menu {
-    text-align: center;
+/* Allows for vertical scrolling in navbar collapse on extra small devices */
+@media (max-width: 575px) and (max-height: 461px) {
+  .navbar-collapse {
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+    align-items: start;
   }
 }
 
 /* Allows dropdown menu to appear on hover on desktop */
 @media (min-width: 576px) {
-  .navbar-nav div:hover .dropdown-menu {
-    display: block;
-  }
+  .navbar-nav div:hover .dropdown-menu { display: block; }
 }
 
 /* Hides bottom margin on homepage lists on small screens */
