@@ -111,5 +111,4 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 window.addEventListener('load', editNavBarLabels)
 window.addEventListener('resize', editNavBarLabels);
-load("header.html", document.getElementById("loadHeader"));
-
+load("navbar.html", document.getElementById("loadNavBar"));
