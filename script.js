@@ -102,11 +102,7 @@ window.addEventListener("DOMContentLoaded", function() {
   // Experience duration
   if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/carleton.html") {
     let supervisorStart = new Date("11/01/2018");
-    let ccssStart = new Date("10/01/2020");
     document.getElementById("supervisor-duration").innerHTML += " (" + timeSince(supervisorStart) + ")";
-    for (let element of document.getElementsByClassName("cu-volunteer-duration")) {
-      element.innerHTML += " (" + timeSince(ccssStart) + ")";
-    }
   }
 });
 window.addEventListener('load', editNavBarLabels)

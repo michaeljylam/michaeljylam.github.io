@@ -60,7 +60,7 @@ a.scroll-anchor {
 }
 
 /* Project page */
-.project-img {
+.project-bg {
   transform: scale(1.2);
   filter: brightness(45%) blur(12.5px);
   width: 100%;
@@ -68,6 +68,14 @@ a.scroll-anchor {
   min-height: 650px;
   max-height: 40vh;
   object-fit: cover;
+}
+
+.project-fg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .project-text {
@@ -178,7 +186,7 @@ a.capsule-button h5, a.capsule-button h6 {
   width: auto;
 }
 
-.navbar-img img:hover { filter: brightness(60%); }
+.navbar-img img:hover, #signature-img:hover { filter: brightness(60%); }
 
 /* ---------- CONDITIONALS ---------- */
 /* Changes to fit navigation bar on extra small mobile screens (e.g. first-generation iPhone SE) */

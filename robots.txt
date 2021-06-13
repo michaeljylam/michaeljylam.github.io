@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /images/favicon/
+Disallow: /images/knockout-text/
+Disallow: /images/logos/
+Disallow: /images/projects/
