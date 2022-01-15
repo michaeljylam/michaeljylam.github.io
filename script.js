@@ -1,10 +1,13 @@
 // ---------- FUNCTION DEFINITIONS ----------
 // Load external HTML file
 function load(url, element) {
-  req = new XMLHttpRequest();
-  req.open("GET", url, false);
-  req.send(null);
-  element.innerHTML = req.responseText;
+  let r = new XMLHttpRequest();
+	r.onreadystatechange = function() {
+		if (this.readyState === 4 && this.status === 200) element.innerHTML = r.responseText;
+	}
+	r.open("GET", url, true);
+	r.setRequestHeader("Content-Type", "text/html");
+	r.send();
 }
 
 // Closes navigation bar on mobile devices when scrolling to a section on the same page
@@ -69,6 +72,8 @@ function timeSince(date) {
     d += months + " months";
   } else if (months !== 0 && months === 1) {
     d += months + " month";
+  } else {
+    d = "1 month";
   }
 
   return d;
@@ -77,7 +82,7 @@ function timeSince(date) {
 // ---------- EVENT LISTENERS ----------
 window.addEventListener("DOMContentLoaded", function() {
   // Hero animations
-  if (window.location.pathname == "/" || window.location.pathname == "/index.html") {
+  if (window.location.pathname == "/" || window.location.pathname.startsWith("/index")) {
     var firstVisit = readCookie("firstVisit");
     if (firstVisit === "false" || window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches === true) {
       $("#home-hero-img-mobile, #home-hero-img-desktop").css("opacity", 1);
@@ -91,18 +96,21 @@ window.addEventListener("DOMContentLoaded", function() {
       });
       createCookie("firstVisit", "false", 0);
     }
-  } else if (window.location.pathname == "/ayjackson.html" || window.location.pathname == "/carleton.html") {
+  } else if (window.location.pathname.startsWith("/ayjackson") || window.location.pathname.startsWith("/carleton")) {
     $(".edu-hero-logo, .edu-hero-title").animate({ opacity: 'toggle' }, 1000, function() {
       $(".edu-hero-subtitle").fadeTo(500, 1);
     });
-  } else if (window.location.pathname == "/projects.html") {
+  } else if (window.location.pathname.startsWith("/projects")) {
     $(".hero-text").animate({ opacity: 'toggle' }, 1000);
   }
   
   // Experience duration
-  if (window.location.pathname == "/" || window.location.pathname == "/index.html" || window.location.pathname == "/carleton.html") {
-    let supervisorStart = new Date("11/01/2018");
-    document.getElementById("supervisor-duration").innerHTML += " (" + timeSince(supervisorStart) + ")";
+  if (window.location.pathname == "/" || window.location.pathname.startsWith("/index")) {
+    let rStart = new Date("09/01/2021");
+    let taStart = new Date("01/01/2022");
+    document.getElementById("retail-duration").innerHTML += " (" + timeSince(rStart) + ")";
+    document.getElementById("relay-duration").innerHTML += " (" + timeSince(rStart) + ")";
+    document.getElementById("ta-duration").innerHTML += " (" + timeSince(taStart) + ")";
   }
 });
 window.addEventListener('load', editNavBarLabels)

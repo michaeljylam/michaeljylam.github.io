@@ -12,11 +12,11 @@ a:hover {
   text-decoration: none;
 }
 
-a h3, a h5 {
+a h3, a h5, a li {
   color: #1C1C1C;
 }
 
-a h3:hover, a h5 :not(.capsule-button):hover {
+a h3:hover, a h5 :not(.capsule-button):hover, a li:hover {
   color: #4A4A4A;
 }
 
@@ -38,6 +38,10 @@ img:not(.enable-pointer) {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.chevron-text::after {
+  content: " ›";
 }
 
 /* Enables scrolling to specific page sections while offsetting navbar height */
@@ -99,14 +103,20 @@ a.scroll-anchor {
   padding-bottom: 8px;
 }
 
-.capsule-button:hover { background-color: rgba(47, 47, 47, 0.7);}
-.capsule-button:hover img { filter: invert(100%); }
-.capsule-button:hover h5, .capsule-button:hover h6 { color: white; }
+.capsule-button img {
+  vertical-align: sub;
+}
 
 a.capsule-button h5, a.capsule-button h6 {
   color: black;
   display: inline;
+  margin-left: 2px;
 }
+
+.capsule-button:hover { background-color: rgba(47, 47, 47, 0.7);}
+.capsule-button:hover img { filter: invert(100%); }
+.capsule-button:hover h5, .capsule-button:hover h6 { color: white; }
+.capsule-button:active { background-color: rgba(28, 28, 28, 0.7);}
 
 /* Hero */
 .hero-div {
@@ -157,15 +167,42 @@ a.capsule-button h5, a.capsule-button h6 {
   color: white;
 }
 
-.dropdown-menu { background-color: #2F2F2F }
+.dropdown-menu { 
+  background-color: rgba(47, 47, 47, 0.7);
+  -webkit-backdrop-filter: saturate(200%) blur(25px);
+  backdrop-filter: saturate(200%) blur(20px);
+  border-radius: 8px;
+  padding: 6px;
+}
+
 .dropdown-toggle:focus { outline: none !important; }
-.dropdown-item { color: white;}
-.dropdown-item:hover { background-color: #E3E3E3; }
+
+.dropdown-item { 
+  color: white;
+  padding: 4px 12px 4px 12px;
+}
 .dropdown-item.active, .dropdown-item:active { background-color: #4A4A4A; }
+
+.dropdown-item:hover {
+  background-color: #E3E3E3;
+  border-radius: 5.4px;
+}
+
+.dropdown-item:active {
+  background-color: #C0C0C0;
+  color: black;
+  border-radius: 5.4px;
+}
+
+.dropdown-header {
+  padding: 12px 12px 2px 12px;
+  pointer-events: none;
+}
 
 .nav-link {
   font-size: 1.1em;
   color: white;
+  padding: 6px 0px 6px 0px;
 }
 
 .nav-link:hover {
@@ -234,8 +271,8 @@ a.capsule-button h5, a.capsule-button h6 {
 @media (prefers-color-scheme: dark) {
   html, body, .container, .container-fluid { background: #111111; }
   h1, h2, h3, h4, h5, h6, p, li, .dropdown-item { color: #DEDAD6; }
-  a h3, a h5 { color: #E3E3E3; }
-  a h3:hover, a h5 :not(.capsule-button):hover { color: #B5B5B5; }
+  a h3, a h5, a li { color: #E3E3E3; }
+  a h3:hover, a h5 :not(.capsule-button):hover, a li:hover { color: #B5B5B5; }
   hr { border-color: #2E2E2E; }
   .language-subtitle { color: #979797; }
   .knockout-text { filter: brightness(125%); }
@@ -247,10 +284,10 @@ a.capsule-button h5, a.capsule-button h6 {
   }
   .google-maps:hover { opacity: 1; }
 
+  .capsule-button img { filter: invert(100%); }
+  a.capsule-button h5, a.capsule-button h6 { color: white; }
   .capsule-button { background-color: rgba(35, 35, 35, 0.5) }
   .capsule-button:hover { background-color: rgba(70, 70, 70, 0.7); }
-  a.capsule-button h5, a.capsule-button h6 { color: white; }
-  .capsule-button img { filter: invert(100%); }
 }
 
 /* Support for devices with a notch design */
