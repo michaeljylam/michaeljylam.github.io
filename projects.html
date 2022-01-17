@@ -10,7 +10,7 @@
   <meta name="theme-color" content="rgb(95, 95, 95)" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="rgb(25, 25, 25)" media="(prefers-color-scheme: dark)">
   <meta name="og:image" content="images/general/ogimage.jpg">
-  <title>Projects & Interests – Michael Lam</title>
+  <title>Projects and Interests – Michael Lam</title>
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -24,6 +24,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <!-- JavaScript -->
+  <script src="lazysizes.min.js" async=""></script>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
       <div class="col p-0" style="overflow: hidden; max-height: 80vh;">
         <img src="images/hero/projects.jpg" class="d-block w-100" style="transform: scale(1.1); filter: brightness(80%) blur(12.5px);" alt="Projects">
         <div class="hero-div">
-          <h1 class="hero-text" style="display: none; line-height: 1.0625; color: white;" class="hero-text">Projects & Interests</h1>
+          <h1 class="hero-text" style="display: none;">Projects and Interests</h1>
         </div>
       </div>
     </div>
@@ -61,7 +63,7 @@
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://github.com/Vinaymeldrum/Scrambler-Android-App" target="_blank">
-                  <img src="images/logos/github.png" width="20px" alt="Jumbler GitHub">
+                  <img data-src="images/logos/github.png" class="lazyload" width="20px" alt="Jumbler GitHub">
                   <h6>GitHub</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
@@ -69,43 +71,43 @@
               <div class="col-sm"></div>
             </div>
           </div>
-          <img src="images/projects/jumbler.png" class="project-fg d-none d-sm-block" height="55%" alt="Two screenshots showing the login page and main game of the Jumbler app."> 
+          <img data-src="images/projects/jumbler.png" class="project-fg d-none d-sm-block lazyload" height="55%" alt="Two screenshots showing the login page and main game of the Jumbler app."> 
         </div>
       </div>
 
       <div class="col-lg-6 pb-3 pr-md-2">
         <div class="col" style="overflow: hidden;">
-          <img src="images/projects/swiftui-bg.jpg" class="project-bg" alt="100 Days of SwiftUI">
+          <img data-src="images/projects/swiftui-bg.jpg" class="project-bg lazyload" alt="100 Days of SwiftUI">
           <div class="project-text p-3 text-center">
-            <img src="images/logos/100daysofswiftui.svg" role="img" class="pb-3 w-100" style="max-width: 250px;" alt="100 Days of SwiftUI">
+            <img data-src="images/logos/100daysofswiftui.svg" role="img" class="pb-3 w-100 lazyload" style="max-width: 250px;" alt="100 Days of SwiftUI">
             <h4>Projects to learn iOS app development with SwiftUI.</h4>
             <h5>...Except it's been well over 100 days.</h5>
             <div class="row pt-3">
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://github.com/michaeljylam/100-Days-of-SwiftUI" target="_blank">
-                  <img src="images/logos/github.png" width="20px" alt="100 Days of SwiftUI GitHub">
+                  <img data-src="images/logos/github.png" class="lazyload" width="20px" alt="100 Days of SwiftUI GitHub">
                   <h6>GitHub</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://www.hackingwithswift.com/100/swiftui" target="_blank">
-                  <img src="images/logos/hackingwithswift.png" width="20px" alt="Hacking with Swift">
+                  <img data-src="images/logos/hackingwithswift.png" class="lazyload" width="20px" alt="Hacking with Swift">
                   <h6>Hacking with Swift</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm"></div>
             </div>
-            <img src="images/projects/swiftui-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100"> 
+            <img data-src="images/projects/swiftui-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100 lazyload"> 
           </div>
-          <img src="images/projects/swiftui.png" class="project-fg d-none d-xl-block" height="55%"> 
+          <img data-src="images/projects/swiftui.png" class="project-fg d-none d-xl-block lazyload" height="55%"> 
         </div>
       </div>
       <div class="col-lg-6 pb-3 pl-md-2">
         <div class="col" style="overflow: hidden;">
-          <img src="images/projects/skye-bg.jpg" class="project-bg" alt="Skye the Doge">
+          <img data-src="images/projects/skye-bg.jpg" class="project-bg lazyload" alt="Skye the Doge">
           <div class="project-text p-3 text-center">
             <h1>🐶 Skye the Doge</h1>
             <h4>Woof woof! Bork bork.</h4>
@@ -114,31 +116,31 @@
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://discord.js.org/" target="_blank">
-                  <img src="images/logos/discordjs.svg" width="20px" alt="discord.js Website">
+                  <img data-src="images/logos/discordjs.svg" class="lazyload" width="20px" alt="discord.js Website">
                   <h6>discord.js</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://github.com/michaeljylam/Skye-the-Doge" target="_blank">
-                  <img src="images/logos/github.png" width="20px" alt="Skye the Doge GitHub">
+                  <img data-src="images/logos/github.png" class="lazyload" width="20px" alt="Skye the Doge GitHub">
                   <h6>GitHub</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm"></div>
             </div>
-            <img src="images/projects/skye-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100"> 
+            <img data-src="images/projects/skye-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100 lazyload"> 
           </div>
-          <img src="images/projects/skye.png" class="project-fg d-none d-xl-block" height="55%"> 
+          <img data-src="images/projects/skye.png" class="project-fg d-none d-xl-block lazyload" height="55%"> 
         </div>
       </div>
 
       <div class="col-12 pb-3">
         <div class="col" style="overflow: hidden;">
-          <img src="images/projects/portfolio-bg.jpg" class="project-bg" alt="Portfolio Website">
+          <img data-src="images/projects/portfolio-bg.jpg" class="project-bg lazyload" alt="Portfolio Website">
           <div class="project-text p-3 text-center">
-            <img src="images/general/signature.svg" role="img" class="pb-3 w-100" style="max-width: 275px;" alt="Portfolio Website">
+            <img data-src="images/general/signature.svg" role="img" class="pb-3 w-100 lazyload" style="max-width: 275px;" alt="Portfolio Website">
             <h4>A website as responsive and adaptive as I am.</h4>
             <div class="d-lg-none">
               <h5>Built upon the foundation of the Bootstrap library, this portfolio website features a mobile-friendly design, support for system-wide dark mode, and support for devices with a notch design.</h5>
@@ -150,62 +152,62 @@
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://getbootstrap.com/" target="_blank">
-                  <img src="images/logos/bootstrap.svg" width="20px" alt="Bootstrap">
+                  <img data-src="images/logos/bootstrap.svg" class="lazyload" width="20px" alt="Bootstrap">
                   <h6>Bootstrap</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://github.com/michaeljylam/michaeljylam.github.io" target="_blank">
-                  <img src="images/logos/github.png" width="20px" alt="Portfolio Website GitHub">
+                  <img data-src="images/logos/github.png" class="lazyload" width="20px" alt="Portfolio Website GitHub">
                   <h6>GitHub</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="javascript: window.location.href = window.location.href">
-                  <img src="images/logos/recursion.svg" width="20px" alt="More details">
+                  <img data-src="images/logos/recursion.svg" class="lazyload" width="20px" alt="More details">
                   <h6>Recursion</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm"></div>
             </div>
-            <img src="images/projects/portfolio-mobile.png" class="mx-auto d-none d-sm-block d-md-none h-100"> 
+            <img data-src="images/projects/portfolio-mobile.png" class="mx-auto d-none d-sm-block d-md-none h-100 lazyload"> 
           </div>
-          <img src="images/readme/responsive-design.png" class="project-fg d-none d-md-block" height="55%"> 
+          <img data-src="images/readme/responsive-design.png" class="project-fg d-none d-md-block lazyload" height="55%"> 
         </div>
       </div>
 
       <div class="col-lg-6 pb-3 pr-md-2">
         <div class="col" style="overflow: hidden;">
-          <img src="images/projects/ghastlydragon-bg.jpg" class="project-bg" alt="GhastlyDragon">
+          <img data-src="images/projects/ghastlydragon-bg.jpg" class="project-bg lazyload" alt="GhastlyDragon">
           <div class="project-text p-3 text-center">
-            <img src="images/logos/ghastlydragon.svg" role="img" class="pb-3 w-100" style="max-width: 300px;" alt="GhastlyDragon">
+            <img data-src="images/logos/ghastlydragon.svg" role="img" class="pb-3 w-100 lazyload" style="max-width: 300px;" alt="GhastlyDragon">
             <h4>a photographic story of moments in time.</h4>
             <h5>shot on iPhone XS Max & Sony RX100 VI.</h5>
             <div class="row pt-3">
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://www.instagram.com/ghastlydragon/" target="_blank">
-                  <img src="images/logos/instagram.png" width="20px" alt="GhastlyDragon Instagram">
+                  <img data-src="images/logos/instagram.png" class="lazyload" width="20px" alt="GhastlyDragon Instagram">
                   <h6>@GhastlyDragon</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm"></div>
             </div>
-            <img src="images/projects/ghastlydragon-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100"> 
+            <img data-src="images/projects/ghastlydragon-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100 lazyload"> 
           </div>
-          <img src="images/projects/ghastlydragon.png" class="project-fg d-none d-xl-block" height="55%"> 
+          <img data-src="images/projects/ghastlydragon.png" class="project-fg d-none d-xl-block lazyload" height="55%"> 
         </div>
       </div>
 
       <div class="col-lg-6 p-0 pl-md-2">
         <div class="col" style="overflow: hidden;">
-          <img src="images/projects/kitteacatfe-bg.jpg" class="project-bg" alt="Kittea Catfé">
+          <img data-src="images/projects/kitteacatfe-bg.jpg" class="project-bg lazyload" alt="Kittea Catfé">
           <div class="project-text p-3 text-center">
-            <img src="images/logos/kitteacatfe.svg" role="img" class="pb-3 w-100" style="max-width: 250px;" alt="Kittea Catfé">
+            <img data-src="images/logos/kitteacatfe.svg" role="img" class="pb-3 w-100 lazyload" style="max-width: 250px;" alt="Kittea Catfé">
             <!--
               <h4>Welcome to Kanata's (potentially) first bubble tea cat café! Enjoy a taste of our bubble tea, have some baked goods, or drink a warm cup of coffee while you pet our adoptable rescue cats.</h4>
             -->
@@ -215,16 +217,16 @@
               <div class="col-sm"></div>
               <div class="col-sm-auto pb-4">
                 <a class="capsule-button" href="https://www.instagram.com/kitteacatfe/" target="_blank">
-                  <img src="images/logos/instagram.png" width="20px" alt="Kittea Catfé Instagram">
+                  <img data-src="images/logos/instagram.png" class="lazyload" width="20px" alt="Kittea Catfé Instagram">
                   <h6>@KitteaCatfe</h6>
                   <h5 aria-hidden="true">&rsaquo;</h5>
                 </a>
               </div>
               <div class="col-sm"></div>
             </div>
-            <img src="images/projects/kitteacatfe-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100"> 
+            <img data-src="images/projects/kitteacatfe-mobile.png" class="mx-auto d-none d-sm-block d-xl-none h-100 lazyload"> 
           </div>
-          <img src="images/projects/kitteacatfe.png" class="project-fg d-none d-xl-block" height="47%"> 
+          <img data-src="images/projects/kitteacatfe.png" class="project-fg d-none d-xl-block lazyload" height="47%"> 
         </div>
       </div>
     </div>
@@ -232,8 +234,8 @@
   <div id="loadNavBar"></div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 
 </html>

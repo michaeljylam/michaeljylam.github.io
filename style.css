@@ -136,6 +136,7 @@ a.capsule-button h5, a.capsule-button h6 {
 .hero-text {
   text-align: center;
   line-height: 1.0625;
+  color: white;
   text-shadow: 1px 1px 2px #333333;
 }
 
@@ -170,7 +171,7 @@ a.capsule-button h5, a.capsule-button h6 {
 .dropdown-menu { 
   background-color: rgba(47, 47, 47, 0.7);
   -webkit-backdrop-filter: saturate(200%) blur(25px);
-  backdrop-filter: saturate(200%) blur(20px);
+  backdrop-filter: saturate(200%) blur(25px);
   border-radius: 8px;
   padding: 6px;
 }
@@ -226,14 +227,8 @@ a.capsule-button h5, a.capsule-button h6 {
 .navbar-img img:hover, #signature-img:hover { filter: brightness(60%); }
 
 /* ---------- CONDITIONALS ---------- */
-/* Changes to fit navigation bar on extra small mobile screens (e.g. first-generation iPhone SE) */
-@media (max-width: 340px) {
-  .btn-icon { display: none; }
-}
-
 /* Font and minor design changes to adapt to extra small devices */
 @media (max-width: 575px) {
-  .hero-text { line-height: 92.5%; }
   .navbar .nav-item, .dropdown-menu { text-align: center; }
   .navbar .nav-item:last-of-type { padding-bottom: 16px; }
 }
@@ -288,6 +283,12 @@ a.capsule-button h5, a.capsule-button h6 {
   a.capsule-button h5, a.capsule-button h6 { color: white; }
   .capsule-button { background-color: rgba(35, 35, 35, 0.5) }
   .capsule-button:hover { background-color: rgba(70, 70, 70, 0.7); }
+}
+
+/* Fallback for Chromium-based browsers due to a bug that prevents backdrop-filter effects from applying on nested elements */
+/* https://bugs.chromium.org/p/chromium/issues/detail?id=993971 */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+  .dropdown-menu { background-color: rgba(47, 47, 47, 1); }
 }
 
 /* Support for devices with a notch design */

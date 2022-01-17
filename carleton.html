@@ -24,6 +24,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <!-- JavaScript -->
+  <script src="lazysizes.min.js" async=""></script>
 </head>
 
 <body>
@@ -34,14 +36,14 @@
         <div class="d-sm-none">
           <div class="hero-div">
               <img src="images/logos/carleton.svg" role="img" class="d-block mx-auto edu-hero-logo" style="display: none;" width="75px" alt="Carleton University">
-              <h1 class="hero-text edu-hero-title" style="display: none; white-space: nowrap; line-height: 1.0625; color: white;" class="hero-text">Carleton U</h1>
+              <h1 class="hero-text edu-hero-title" style="display: none; white-space: nowrap;" class="hero-text">Carleton U</h1>
               <h5 class="hero-text edu-hero-subtitle" style="opacity: 0; white-space: nowrap; color: #DDDDDD;">Ours the Task Eternal.</h5>
           </div>
         </div>
         <div class="d-none d-sm-block">
           <div class="hero-div">
             <img src="images/logos/carleton.svg" role="img" class="d-block mx-auto edu-hero-logo" style="display: none;" width="125px" alt="Carleton University">
-            <h1 class="hero-text edu-hero-title" style="display: none; line-height: 1.0625; color: white;" class="hero-text">Carleton University</h1>
+            <h1 class="hero-text edu-hero-title" style="display: none;" class="hero-text">Carleton University</h1>
             <h5 class="hero-text edu-hero-subtitle" style="opacity: 0; color: #DDDDDD;">Ours the Task Eternal.</h5>
           </div>
         </div>
@@ -78,7 +80,7 @@
           <p>Awarded for achieving a GPA of 10.0 or higher (out of 12.0) during the Fall 2020 to Winter 2021 school year.</p>
           <div class="col pb-4 text-center">
             <a class="capsule-button" href="https://carleton.ca/awards/2020-2021-deans-honour-list" target="_blank">
-              <img src="images/logos/carleton-bw.png" width="20px" alt="Dean's Honour List">
+              <img data-src="images/logos/carleton-bw.png" class="lazyload" width="20px" alt="Dean's Honour List">
               <h6>Dean's Honour List</h6>
               <h5 aria-hidden="true">&rsaquo;</h5>
             </a>
@@ -281,7 +283,7 @@
     </div>
     <div class="row pt-2">
       <div class="col-sm-auto pb-2">
-        <img src="images/logos/relayforlife.png" class="d-block" width="75px" alt="Relay for Life">
+        <img data-src="images/logos/relayforlife.png" class="d-block lazyload" width="75px" alt="Relay for Life">
       </div>
       <div class="col px-3">
         <div class="row">
@@ -320,7 +322,7 @@
     <div class="row">
       <div class="col pt-2 pb-3 text-center">
         <a class="capsule-button" href="https://www.facebook.com/RFLCarleton/" target="_blank">
-          <img src="images/logos/facebook.png" width="20px" alt="Carleton University Relay for Life Facebook Page">
+          <img data-src="images/logos/facebook.png" class="lazyload" width="20px" alt="Carleton University Relay for Life Facebook Page">
           <h6>Facebook Page</h6>
           <h5 aria-hidden="true">&rsaquo;</h5>
         </a>
@@ -329,7 +331,7 @@
     <hr>
     <div class="row pt-3">
       <div class="col-sm-auto pb-2">
-        <img src="images/logos/jack-org.png" class="d-block" width="75px" alt="Jack.org Carleton">
+        <img data-src="images/logos/jack-org.png" class="d-block lazyload" width="75px" alt="Jack.org Carleton">
       </div>
       <div class="col px-3">
         <div class="row">
@@ -351,7 +353,7 @@
     <div class="row">
       <div class="col pt-2 pb-2 text-center">
         <a class="capsule-button" href="https://www.facebook.com/Jack.OrgCarleton/" target="_blank">
-          <img src="images/logos/facebook.png" width="20px" alt="Jack.org Carleton Facebook Page">
+          <img data-src="images/logos/facebook.png" class="lazyload" width="20px" alt="Jack.org Carleton Facebook Page">
           <h6>Facebook Page</h6>
           <h5 aria-hidden="true">&rsaquo;</h5>
         </a>
@@ -372,7 +374,7 @@
         <p>Asian Canadians' Association Carleton is a group dedicated to providing educational and social activities to establish a community, and raise awareness about multi-generational Asian Canadian and international experiences.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://www.instagram.com/asiancanadians_carleton/" target="_blank">
-            <img src="images/logos/instagram.png" width="20px" alt="Asian Canadians' Association Carleton Instagram">
+            <img data-src="images/logos/instagram.png" class="lazyload" width="20px" alt="Asian Canadians' Association Carleton Instagram">
             <h6>@asiancanadians_carleton</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -383,7 +385,7 @@
         <p>The Carleton Artificial Intelligence Society (CAIS) is a cross-disciplinary student organisation that aims to provide individuals with the necessary skills and knowledge to succeed in their professional, personal, or academic journey into data science, artificial intelligence, and machine learning.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://carletonai.com/" target="_blank">
-            <img src="images/logos/cais.png" width="20px" alt="Carleton Artificial Intelligence Society Website">
+            <img data-src="images/logos/cais.png" class="lazyload" width="20px" alt="Carleton Artificial Intelligence Society Website">
             <h6>CAIS Website</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -394,7 +396,7 @@
         <p>The Carleton Computer Science Society (CCSS) is an academic society representing, and creating academic, social, and industry-related opportunities and resources for undergraduate Computer Science students at Carleton.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://ccss.carleton.ca/" target="_blank">
-            <img src="images/logos/ccss-knockout.png" width="20px" alt="Carleton University Biology Society Instagram">
+            <img data-src="images/logos/ccss-knockout.png" class="lazyload" width="20px" alt="Carleton University Biology Society Instagram">
             <h6>CCSS Website</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -407,7 +409,7 @@
         <p>The Carleton Cyber Security Club (CCSC) is a group of students passionate about cybersecurity. Members of the club participate in challenges and events, such as Capture the Flag, and listen to guests speakers to further develop their skills.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://discord.gg/ZGEQs6k/" target="_blank">
-            <img src="images/logos/discord.svg" width="20px" alt="Carleton University Biology Society Instagram">
+            <img data-src="images/logos/discord.svg" class="lazyload" width="20px" alt="Carleton University Biology Society Instagram">
             <h6>CCSC Discord</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -418,7 +420,7 @@
         <p>The Carleton Web Dev Club (CWDC) aims to build a community of students and faculty interested in furthering their study of web development and related areas. Members of the club build and improve their knowledge within the domain, participate in hackathons and other challenges, develop independent and collaborative projects, connect with members in the industry, and participate in career preparation.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://discord.gg/rSMzZBw/" target="_blank">
-            <img src="images/logos/discord.svg" width="20px" alt="Carleton Web Dev Club Instagram">
+            <img data-src="images/logos/discord.svg" class="lazyload" width="20px" alt="Carleton Web Dev Club Instagram">
             <h6>CWDC Discord</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -429,7 +431,7 @@
         <p>The Carleton University Biology Society (CUBS) provides and fosters a community where students within the Department of Biology, as well as students with an interest in biology, can interact and discuss current biological topics. CUBS also acts as a resource for students to engage in both social and professional opportunities within the department and field of biology.</p>
         <div class="col pb-4 text-center">
           <a class="capsule-button" href="https://www.instagram.com/cubiologysociety/" target="_blank">
-            <img src="images/logos/instagram.png" width="20px" alt="Carleton University Biology Society Instagram">
+            <img data-src="images/logos/instagram.png" class="lazyload" width="20px" alt="Carleton University Biology Society Instagram">
             <h6>@cubiologysociety</h6>
             <h5 aria-hidden="true">&rsaquo;</h5>
           </a>
@@ -440,8 +442,8 @@
   <div id="loadNavBar"></div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 
 </html>
