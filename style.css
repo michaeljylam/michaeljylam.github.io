@@ -8,6 +8,10 @@ html, body {
   margin-top: 68px;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -60,7 +64,12 @@ a.scroll-anchor {
 }
 
 .google-maps {
-  border-radius: 5px;
+  border-radius: 12px;
+}
+
+/* Education */
+.edu-hero-title {
+  margin-bottom: 4px;
 }
 
 /* Project page */
@@ -135,7 +144,6 @@ a.capsule-button h5, a.capsule-button h6 {
 
 .hero-text {
   text-align: center;
-  line-height: 1.0625;
   color: white;
   text-shadow: 1px 1px 2px #333333;
 }
@@ -225,6 +233,22 @@ a.capsule-button h5, a.capsule-button h6 {
 }
 
 .navbar-img img:hover, #signature-img:hover { filter: brightness(60%); }
+
+/* ---------- BOOTSTRAP 5 REVERSIONS ---------- */
+/* Reverts changes to column positions */
+.col {
+  position: relative;
+}
+
+/* Overrides changes to responsive font size */
+h1.hero-text {
+  font-size: 2.5rem;
+}
+
+/* Reverts container width changes given the new XXL breakpoint */
+@media (min-width: 1400px) {
+  .container { max-width: 1140px; }
+}
 
 /* ---------- CONDITIONALS ---------- */
 /* Font and minor design changes to adapt to extra small devices */

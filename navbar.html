@@ -5,11 +5,11 @@
 <body>
   <nav class="navbar navbar-expand-sm fixed-top shadow">
     <a class="navbar-brand enable-pointer" href="/" id="signature-img" oncontextmenu="return false;"><img src="images/general/signature.svg" role="img" draggable="false" alt="Michael Lam"></a>
-    <button class="navbar-toggler dropdown-toggle mt-2 mb-2 ml-2" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="Open menu">Menu</button>
-    <div class="collapse navbar-collapse" id="navigation-bar">
-      <div class="navbar-nav ml-auto">
+    <button class="navbar-toggler dropdown-toggle mt-2 mb-2 ml-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="Open menu">Menu</button>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navigation-bar">
+      <div class="navbar-nav">
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="home-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
+          <a class="nav-link dropdown-toggle" href="#" id="home-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
           <div class="dropdown-menu mt-0" aria-labelledby="home-dropdown">
             <a class="dropdown-item" href="/#home-about" onclick="toggleNavbarCollapse();">About</a>
             <a class="dropdown-item" href="/#home-education" onclick="toggleNavbarCollapse();">Education</a>
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="education-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
+          <a class="nav-link dropdown-toggle" href="#" id="education-dropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education</a>
           <div class="dropdown-menu mt-0" aria-labelledby="education-dropdown">
             <a class="dropdown-item" href="carleton">Carleton University</a>
             <a class="dropdown-item" href="ayjackson">A.Y. Jackson Secondary School</a>
@@ -34,7 +34,7 @@
         <div class="d-none d-md-block" id="link-divider"></div>
         <a class="navbar-img d-none d-sm-block" href="https://github.com/michaeljylam" target="_blank"><img src="images/logos/github.png" class="enable-pointer" style="filter: invert(100%);" alt="GitHub"></a>
         <a class="navbar-img d-none d-sm-block" href="https://www.linkedin.com/in/michaeljylam/" target="_blank"><img src="images/logos/linkedin.png" class="enable-pointer" alt="LinkedIn"></a>
-    </div>
+      </div>
   </nav>
 </body>
 

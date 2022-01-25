@@ -12,18 +12,20 @@ function load(url, element) {
 
 // Closes navigation bar on mobile devices when scrolling to a section on the same page
 function toggleNavbarCollapse() {
-  $("#navigation-bar").collapse('hide');
+  bootstrap.Collapse.getInstance(document.getElementById('navigation-bar')).hide();
 }
 
 // Edits link labels on navigation bar for small devices
 function editNavBarLabels() {
-  let navBarWidth = parseInt(getComputedStyle(document.getElementById("navigation-bar")).width)
-  let projectLabel = document.getElementById("navbar-projects-link");
-
-  if (navBarWidth >= 475 || isNaN(navBarWidth)) {
-    projectLabel.innerHTML = "Projects & Interests"
-  } else {
-    projectLabel.innerHTML = "Projects"
+  if (document.getElementById("navigation-bar")) {
+    let navBarWidth = parseInt(getComputedStyle(document.getElementById("navigation-bar")).width)
+    let projectLabel = document.getElementById("navbar-projects-link");
+  
+    if (navBarWidth >= 475 || isNaN(navBarWidth)) {
+      projectLabel.innerHTML = "Projects and Interests"
+    } else {
+      projectLabel.innerHTML = "Projects"
+    }
   }
 }
 
@@ -85,23 +87,30 @@ window.addEventListener("DOMContentLoaded", function() {
   if (window.location.pathname == "/" || window.location.pathname.startsWith("/index")) {
     var firstVisit = readCookie("firstVisit");
     if (firstVisit === "false" || window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches === true) {
-      $("#home-hero-img-mobile, #home-hero-img-desktop").css("opacity", 1);
-      $(".hero-text").show();
+      document.getElementById("home-hero-img-mobile").style.opacity = 1;
+      document.getElementById("home-hero-img-desktop").style.opacity = 1;
+      for (let i = 0; i < document.getElementsByClassName("hero-text").length; i++) {
+        document.getElementsByClassName("hero-text")[i].style.opacity = 1;
+      }
     } else {
-      $("#hero-index-mobile .hero-text").animate({ opacity: 'toggle' }, 1000, function() {
-        $("#home-hero-img-mobile").fadeTo(1500, 1);
-      });
-      $("#home-hero-img-desktop").fadeTo(1500, 1, function() {
-        $("#hero-index-desktop .hero-text").animate({ height: 'toggle', opacity: 'toggle' }, 1000);
-      });
+      Velocity(document.getElementById("home-hero-img-mobile"), { opacity: 1 }, { duration: 1500 });
+      Velocity(document.getElementById("home-hero-img-desktop"), { opacity: 1 }, { duration: 1500 });
+
+      setTimeout(function() {
+        Velocity(document.querySelectorAll("#hero-index-mobile .hero-text"), { opacity: 1 }, { duration: 1000 });
+        Velocity(document.querySelectorAll("#hero-index-desktop .hero-text"), { opacity: 1 }, { duration: 1000 });
+      }, 750);
+      
       createCookie("firstVisit", "false", 0);
     }
   } else if (window.location.pathname.startsWith("/ayjackson") || window.location.pathname.startsWith("/carleton")) {
-    $(".edu-hero-logo, .edu-hero-title").animate({ opacity: 'toggle' }, 1000, function() {
-      $(".edu-hero-subtitle").fadeTo(500, 1);
-    });
+    Velocity(document.querySelectorAll(".edu-hero-logo, .edu-hero-title"), { opacity: 1 }, { duration: 1500 });
+
+    setTimeout(function() {
+      Velocity(document.querySelectorAll(".edu-hero-subtitle"), { opacity: 1 }, { duration: 750 });
+    }, 1500);
   } else if (window.location.pathname.startsWith("/projects")) {
-    $(".hero-text").animate({ opacity: 'toggle' }, 1000);
+    Velocity(document.querySelectorAll(".hero-text"), { opacity: 1 }, { duration: 1000 });
   }
   
   // Experience duration
