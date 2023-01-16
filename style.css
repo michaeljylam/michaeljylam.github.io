@@ -184,6 +184,8 @@ a.capsule-button h5, a.capsule-button h6 {
   padding: 6px;
 }
 
+.dropdown-menu[data-bs-popper] { top: auto; }
+
 .dropdown-toggle:focus { outline: none !important; }
 
 .dropdown-item { 
@@ -194,16 +196,17 @@ a.capsule-button h5, a.capsule-button h6 {
 
 .dropdown-item:hover {
   background-color: #E3E3E3;
-  border-radius: 5.4px;
+  border-radius: 4px;
 }
 
 .dropdown-item:active {
   background-color: #C0C0C0;
   color: black;
-  border-radius: 5.4px;
+  border-radius: 4px;
 }
 
 .dropdown-header {
+  color: #8F8F8F;
   padding: 12px 12px 2px 12px;
   pointer-events: none;
 }
@@ -214,7 +217,7 @@ a.capsule-button h5, a.capsule-button h6 {
   padding: 6px 0px 6px 0px;
 }
 
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
   color: #999999;
   text-decoration: none;
 }
@@ -292,7 +295,7 @@ h1.hero-text {
   h1, h2, h3, h4, h5, h6, p, li, .dropdown-item { color: #DEDAD6; }
   a h3, a h5, a li { color: #E3E3E3; }
   a h3:hover, a h5 :not(.capsule-button):hover, a li:hover { color: #B5B5B5; }
-  hr { border-color: #2E2E2E; }
+  hr { color: #4F4F4F; }
   .language-subtitle { color: #979797; }
   .knockout-text { filter: brightness(125%); }
   .separator { background-color: black; }
@@ -307,12 +310,6 @@ h1.hero-text {
   a.capsule-button h5, a.capsule-button h6 { color: white; }
   .capsule-button { background-color: rgba(35, 35, 35, 0.5) }
   .capsule-button:hover { background-color: rgba(70, 70, 70, 0.7); }
-}
-
-/* Fallback for Chromium-based browsers due to a bug that prevents backdrop-filter effects from applying on nested elements */
-/* https://bugs.chromium.org/p/chromium/issues/detail?id=993971 */
-@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-  .dropdown-menu { background-color: rgba(47, 47, 47, 1); }
 }
 
 /* Support for devices with a notch design */

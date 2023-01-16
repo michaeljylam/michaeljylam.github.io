@@ -114,14 +114,23 @@ window.addEventListener("DOMContentLoaded", function() {
   }
   
   // Experience duration
-  if (window.location.pathname == "/" || window.location.pathname.startsWith("/index")) {
-    let rStart = new Date("09/01/2021");
-    let taStart = new Date("01/01/2022");
-    document.getElementById("retail-duration").innerHTML += " (" + timeSince(rStart) + ")";
-    document.getElementById("relay-duration").innerHTML += " (" + timeSince(rStart) + ")";
-    document.getElementById("ta-duration").innerHTML += " (" + timeSince(taStart) + ")";
+  // if (window.location.pathname == "/" || window.location.pathname.startsWith("/index")) {
+  //   let taStart = new Date("01/01/2022");
+  //   document.getElementById("ta-duration").innerHTML += " (" + timeSince(taStart) + ")";
+  // }
+});
+
+window.addEventListener("load", function() {
+  // Fallback for Chromium-based browsers due to a bug that prevents backdrop-filter effects from applying on nested elements
+  // https://bugs.chromium.org/p/chromium/issues/detail?id=993971
+  if (window.chrome) {
+    let dropdownMenus = document.getElementsByClassName("dropdown-menu");
+    for (let i = 0; i < dropdownMenus.length; i++) {
+      dropdownMenus[i].style.backgroundColor = "rgba(70, 70, 70, 1)";
+    }
   }
 });
-window.addEventListener('load', editNavBarLabels)
+
+window.addEventListener('load', editNavBarLabels);
 window.addEventListener('resize', editNavBarLabels);
 load("navbar.html", document.getElementById("loadNavBar"));
